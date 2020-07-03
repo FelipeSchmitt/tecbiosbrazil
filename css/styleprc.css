@@ -1,0 +1,19 @@
+.seletor{
+    text-align: center;
+}
+.seletor{
+    padding: 10px;
+    display: block;
+}
+.seletor img{
+    width: 80%;
+    padding: 2px;
+}
+.seletor img:hover{
+    box-shadow: 0 0 10px white;
+}
+@media screen and (max-width: 1080px){
+.seletor img{
+    width: 98%;
+}
+}

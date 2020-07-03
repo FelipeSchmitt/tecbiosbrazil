@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <title>TecBios-Home</title>
+</head>
+<body onload="slide1()">
+    <header>
+    <img src="images/menu.png" onclick="dropdown()">
+    </header>
+    <div id="menudrop" style="visibility: hidden;">
+        <a href="#"><div id="box">Home</div></a>
+        <a href="cpuseletor.html"><div id="box">CPU</div></a>
+        <a href="#"><div id="box">GPU</div></a>
+    </div>
+    <div id="slide">
+        <img id="slideimg">
+    </div>
+    <div class="style">
+    <div class="title"><p>TecBios</p>
+        Bem Vindo a TecBios.net, tenha informações e faça comparações em primeira mão sobre:
+    </div>
+    <div class="seletor">
+        <div id="redirect">
+            <a href="cpuseletor.html"><img src="images/processor.png"></a>
+        </div>
+        <div id="redirect">
+            <img src="images/gpu1.png">
+        </div>
+        </div>
+        <br><br><br>
+    </div>
+    <br><br><br>
+
+    <script src="js/menu.js"></script>
+    <script>
+
+        var tempo = 5000;
+
+    function slide1(){
+        document.getElementById("slideimg").src="images/slide1.jpg"
+        setTimeout("slide2()", tempo)
+    }
+    function slide2(){
+        document.getElementById("slideimg").src="images/slide2.jpg"
+        setTimeout("slide3()", tempo)
+    }
+    function slide3(){
+        document.getElementById("slideimg").src="images/slide3.jpg"
+        setTimeout("slide1()", tempo)
+    }   
+    </script>
+</body>
+</html>
