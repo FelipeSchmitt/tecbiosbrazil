@@ -1,0 +1,40 @@
+body{
+    color: white;
+}
+h1{
+    text-align: center;
+    font-family: Arial;
+    font-weight: 600;
+}
+p{
+    text-align: center;
+    color: red;
+    font-size: 32px;
+}
+input{
+    width: 30%;
+    height: 35px;
+    border-radius: 3px;
+    border-style: solid;
+    border-color: black;
+    font-size: 28px;
+}
+#first{
+    margin-left: 19%;
+}
+
+@media screen and (max-width: 1080px) {
+input{
+    width: 85%;
+    height: 40px;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-left: 8%;
+}
+#first{
+    margin: 0;
+}
+
+}
