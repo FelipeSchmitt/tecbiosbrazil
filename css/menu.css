@@ -16,7 +16,7 @@ header img{
 }
 #menudrop{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     height: 70px;
     background-color: brown;
     margin-top: -50px;
@@ -45,6 +45,9 @@ a{
     header img{
         width: 65px;
         height: 60px;
+    }
+    #box{
+        font-size: 24px;
     }
 
 }
