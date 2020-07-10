@@ -1,0 +1,44 @@
+body{
+    background-color: #363636;
+
+}
+td a{
+color: black;
+font-size: 38px;
+font-weight: 800;
+text-decoration: none;
+}
+td{
+text-align: center;
+border-style: solid;
+border-color: black;
+border-width: 2px;
+}
+table{
+    background-color: #228B22;
+    margin: auto;
+    width: 50%;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+}
+#img{
+text-align: center;
+}
+#img img{
+    width: 50%;
+}
+
+@media screen and (max-width: 1080px) {
+td a{
+font-size: 32px;
+}
+table{
+width: 90%;
+}
+#img img{
+width: 90%;
+padding: 10px;
+}
+
+}
