@@ -48,6 +48,10 @@
     background-color: rgba(238, 248, 250, 0.85);
     box-shadow: 0 0 8px black;
 }
+h4{
+    text-align: center;
+    color: red;
+}
 @media screen and (max-width: 55em){
     #slide{
         margin-left: -79%;
