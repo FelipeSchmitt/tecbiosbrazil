@@ -9,7 +9,6 @@ header{
 }
 header img{
     padding: 5px;
-    line-height: 60px;
     width: 65px;
     height: 60px;
     cursor: pointer;
@@ -40,7 +39,7 @@ a{
 
 @media screen and (max-width: 1080px){
     header{
-        height: 80px;
+        height: 70px;
     }
     header img{
         width: 65px;
