@@ -23,7 +23,7 @@
     elementcreate.appendChild(document.createTextNode("Selecione uma CPU:"))
     first.appendChild(elementcreate)
 
-    
+
     const second = document.getElementById("second")
     second.innerHTML=""
     const secondelement = document.createElement("option")
@@ -46,8 +46,8 @@
 
 async function readTasks() {
     processors = []
-    const logTasks = await db.collection("processors").get()
-    for (doc of logTasks.docs) {
+    const logPrc1 = await db.collection("processors").get()
+    for (doc of logPrc1.docs) {
     processors.push({
         id: doc.id,
         title: doc.data().title,
@@ -57,3 +57,21 @@ async function readTasks() {
     renderTasks()
 }
 readTasks()
+
+function visibilitytable(){
+  const table = document.getElementById("compare").style
+  const loading = document.getElementById("loading").style
+  loading.visibility="visible"
+  loading.marginTop="30px"
+  if (table.visibility=="hidden"){
+    setTimeout(function(){
+      table.visibility="visible"
+      loading.visibility="hidden"
+      loading.marginTop="-5%"
+    }, 2000)
+  }
+  if (table.visibility=="visible"){
+    loading.visibility="hidden"
+    loading.marginTop="-5%"
+  }
+}
