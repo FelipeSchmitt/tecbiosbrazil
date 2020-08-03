@@ -1,15 +1,15 @@
   // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyBTRp7A9moWiuX3qwhABfELWVLdNKqSS0o",
-    authDomain: "tecbiosbrazil-69430.firebaseapp.com",
-    databaseURL: "https://tecbiosbrazil-69430.firebaseio.com",
-    projectId: "tecbiosbrazil-69430",
-    storageBucket: "tecbiosbrazil-69430.appspot.com",
-    messagingSenderId: "893507120163",
-    appId: "1:893507120163:web:b06d5544b3143308385596"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+var firebaseConfig = {
+  apiKey: "AIzaSyCnz9pRjIRmc0-FHlvAKFmsaDXBtvpgWyE",
+  authDomain: "tecbiosbrazilcompare-db.firebaseapp.com",
+  databaseURL: "https://tecbiosbrazilcompare-db.firebaseio.com",
+  projectId: "tecbiosbrazilcompare-db",
+  storageBucket: "tecbiosbrazilcompare-db.appspot.com",
+  messagingSenderId: "469558542940",
+  appId: "1:469558542940:web:0ad29848c170bb687bdc99"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
 
   const db = firebase.firestore()
