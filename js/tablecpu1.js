@@ -35,7 +35,14 @@ function renderProcessor(){
   pci_express1.innerHTML=""
   const integrated_graphics1 = document.getElementById("integrated_graphics1")
   integrated_graphics1.innerHTML=""
-
+  const cinebench_r15_single_core1 = document.getElementById("cinebench_r15_single_core1")
+  cinebench_r15_single_core1.innerHTML=""
+  const cinebench_r15_multi_core1 = document.getElementById("cinebench_r15_multi_core1")
+  cinebench_r15_multi_core1.innerHTML=""
+  const passmark_single_thread1 = document.getElementById("passmark_single_thread1")
+  passmark_single_thread1.innerHTML=""
+  const passmark_multi_thread1 = document.getElementById("passmark_multi_thread1")
+  passmark_multi_thread1.innerHTML=""
   const maximum_temperature1 = document.getElementById("maximum_temperature1")
   maximum_temperature1.innerHTML=""
   for(processor of processors){
@@ -56,7 +63,10 @@ function renderProcessor(){
       instructions1.appendChild(document.createTextNode(processor.instructions))
       pci_express1.appendChild(document.createTextNode(processor.pci_express))
       integrated_graphics1.appendChild(document.createTextNode(processor.integrated_graphics))
-
+      cinebench_r15_single_core1.appendChild(document.createTextNode(processor.cinebench_r15_single_core))
+      cinebench_r15_multi_core1.appendChild(document.createTextNode(processor.cinebench_r15_multi_core))
+      passmark_single_thread1.appendChild(document.createTextNode(processor.passmark_single_thread))
+      passmark_multi_thread1.appendChild(document.createTextNode(processor.passmark_multi_thread))
       maximum_temperature1.appendChild(document.createTextNode(processor.maximum_temperature))
   }
 }
@@ -86,7 +96,10 @@ async function readProcessor() {
         instructions: doc.data(). instructions,
         pci_express: doc.data(). pci_express,
         integrated_graphics: doc.data(). integrated_graphics,
-        
+        cinebench_r15_single_core: doc.data(). cinebench_r15_single_core,
+        cinebench_r15_multi_core: doc.data(). cinebench_r15_multi_core,
+        passmark_single_thread: doc.data(). passmark_single_thread,
+        passmark_multi_thread: doc.data(). passmark_multi_thread,
         maximum_temperature: doc.data(). maximum_temperature,
         
         })
