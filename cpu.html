@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/cpu.css">
+    <link rel="stylesheet" href="css/tdstyle.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+    <title>Ficha Tecnica CPU</title>
+</head>
+<body>
+    <header>
+		<img src="images/menu.png" onclick="dropdown()">
+		</header>
+		<div id="menudrop" style="visibility: hidden;">
+			<a href="index.html"><div id="box">Home</div></a>
+			<a href="cpuseletor.html"><div id="box">CPU</div></a>
+            <a href="gpuseletor.html"><div id="box">GPU</div></a>
+            <a href="#"><div id="box">Sobre</div></a>
+		</div>
+    <script src="js/menu.js"></script>
+
+    <h1>CPU:</h1>
+    <div id="center2">
+    <select name="" id="first"></select>
+</div>
+<img src="https://www.paulus.com.br/loja/templates/responsivo/images/icons/ajax-loader.gif" id="loading" alt="loading" style="visibility: hidden;">
+<button onclick="visibilitytable(), readProcessor()">Analisar</button>
+<div id="compare" style="visibility: hidden;">
+    <div class="body">
+        <table id="tabletitle">
+            <td colspan="2" id="lightgreen">
+                <h2 id="center">Especificações
+            <td id="lightgreen">
+                <h2 id="title1"></h2>
+            </tr>
+            
+        
+        <table id="table2">
+        
+            <td colspan="2" id="lightgreen">
+                <h3 id="yellowtext">Data de Lançamento
+            <td id="lightgreen">
+                <h3 id="release1"></h3>
+            </td>
+                </tr>
+        
+            <td colspan="2" id="lightgreen">
+                <h3 id="yellowtext">Preço de Lançamento</h3>
+            <td id="lightgreen">
+                <h3 id="launch_price1"></h3>
+                </tr>
+        
+            <td colspan="2" id="lightgreen">
+                <h3 id="yellowtext">Processo de Fabricação
+            <td id="lightgreen">
+                <h3 id="manufacturing_process1"></h3>
+                </tr>
+        </div>
+        
+            <td colspan="2">
+                <h3 id="redtext">TDP(Projeto de Força Térmica)
+            <td>
+                <h3 id="thermal_design_power1"></h3>
+                </tr>
+        
+            <td colspan="2" id="lightgreen">
+                <h3 id="greentext">Socket
+            <td id="lightgreen">
+                <h3 id="socket1"></h3>
+                </tr>
+        
+            <td colspan="2" id="lightgreen">
+                <h3 id="greentext">Núcleos
+            <td id="lightgreen">
+                <h3 id="cores1"></h3>
+                </tr>
+        
+            <td colspan="2" id="lightgreen">
+                <h3 id="greentext">Threads
+            <td id="lightgreen">
+                <h3 id="threads1"></h3>
+                </tr>
+        
+            <td colspan="2" id="lightgreen">
+                <h3 id="greentext">Frequência Base
+            <td id="lightgreen">
+                <h3 id="base_frequency1"></h3>
+                </tr>
+        
+            <td colspan="2" id="lightgreen">
+                <h3 id="greentext">Frequência Turbo
+            <td id="lightgreen">
+                <h3 id="turbo_frequency1"></h3>
+                </tr>		
+
+            <td colspan="2" id="lightgreen">
+                <h3 id="greentext">Cache
+            <td id="lightgreen">
+                <h3 id="cache1"></h3>
+                </tr>
+        
+            <td colspan="2" id="lightgreen">
+                <h3 id="greentext">Multiplicador
+            <td id="lightgreen">
+                <h3 id="multiplier1"></h3>
+                </tr>
+        
+            <td colspan="2" id="lightgreen">
+                <h3 id="greentext">Multiplicador (Turbo)
+            <td id="lightgreen">
+                <h3 id="turbo_multiplier1"></h3>
+                </tr>
+        
+            <td colspan="2">
+                <h3><font color="#FF4500">Velocidade do Bus
+            <td>
+                <h3 id="bus_speed1"></h3>
+                </tr>
+        
+            <td colspan="2" id="lightgreen">
+                <h2>Instruções</h2>
+            <td id="lightgreen">
+                <h3 id="instructions1"></h3>
+                </tr>
+        
+            <td colspan="2">
+                <h3 id="darkcyantext">PCI Express (comunicação)
+            <td>
+                <h3 id="pci_express1"></h3>
+                </tr>
+        
+            <td colspan="2">
+                <h3 id="darkcyantext">Gráficos(IGPU)
+            <td>
+                <h3 id="integrated_graphics1"></h3>
+                </tr>
+        
+            <td colspan="2" id="lightgreen">
+                <h3 id="purpletext">Cinebench R15 (Single-Core)
+            <td id="lightgreen">
+                <h3 id="cinebench_r15_single_core1"></h3>
+                </tr>
+        
+            <td colspan="2" id="lightgreen">
+                <h3 id="purpletext">Cinebench R15 (Multi-Core)
+            <td id="lightgreen">
+                <h3 id="cinebench_r15_multi_core1"></h3>
+                </tr>
+        
+            <td colspan="2" id="lightgreen">
+                <h3 id="purpletext">Passmark (Single-Thread)
+            <td id="lightgreen">
+                <h3 id="passmark_single_thread1"></h3>
+                </tr>
+        
+            <td colspan="2" id="lightgreen">
+                <h3 id="purpletext">Passmark (Multi-Thread)
+            <td id="lightgreen">
+                <h3 id="passmark_multi_thread1"></h3>
+                </tr>
+        
+            <td colspan="2">
+                <h3 id="redtext">Temperatura Máxima de Operação
+            <td height="50" width="263">
+                <h3 id="maximum_temperature1"></h3>
+                </tr>
+        
+            </div>
+
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-firestore.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+    <script src="select2.min.js"></script>
+    <script src="js/cpu.js"></script>
+    <script src="js/tablecpu1.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#first').select2({});
+        });        
+    </script>
+    <script> 
+        $(function(){
+          $("#includedContent").load("tablecompare.html"); 
+        });
+    </script>
+</body>
+</html>

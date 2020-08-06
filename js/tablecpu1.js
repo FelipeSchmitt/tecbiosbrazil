@@ -1,5 +1,6 @@
 let processors = []
 
+
 function renderProcessor(){
   const title1 = document.getElementById("title1")
   title1.innerHTML=""
@@ -74,7 +75,10 @@ function renderProcessor(){
 async function readProcessor() {
     processors = []
     const first = document.getElementById("first").value
-    const second = document.getElementById("second").value
+    if (first == "Selecione uma CPU:"){
+        alert("Escolha uma opção:")
+        document.location.reload(true);
+    }else{
     const logPrc = await db.collection("processors").where("value", "==", first).get()
     for (doc of logPrc.docs){
     processors.push({
@@ -106,5 +110,5 @@ async function readProcessor() {
     }
     renderProcessor()
 }
-readProcessor()
+}
 

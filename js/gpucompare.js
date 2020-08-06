@@ -1,4 +1,4 @@
-  var firebaseConfig = {
+var firebaseConfig = {
     apiKey: "AIzaSyCnz9pRjIRmc0-FHlvAKFmsaDXBtvpgWyE",
     authDomain: "tecbiosbrazilcompare-db.firebaseapp.com",
     databaseURL: "https://tecbiosbrazilcompare-db.firebaseio.com",
@@ -13,29 +13,29 @@
 
   const db = firebase.firestore()
 
-  function renderTasks(){
+  function renderVC(){
     const first = document.getElementById("first")
     first.innerHTML=""
     const firstelement = document.getElementById("first")
     firstelement.innerHTML=""
     const elementcreate = document.createElement("option")
-    elementcreate.appendChild(document.createTextNode("Selecione uma CPU:"))
+    elementcreate.appendChild(document.createTextNode("Selecione uma GPU:"))
     first.appendChild(elementcreate)
 
 
     const second = document.getElementById("second")
     second.innerHTML=""
     const secondelement = document.createElement("option")
-    secondelement.appendChild(document.createTextNode("Selecione uma CPU:"))
+    secondelement.appendChild(document.createTextNode("Selecione uma GPU:"))
     second.appendChild(secondelement)
-    for (processor of processors){
+    for (videocard of videocards){
         const newItem = document.createElement("option")
-        newItem.setAttribute("value", processor.value)
-        newItem.appendChild(document.createTextNode(processor.title))
+        newItem.setAttribute("value", videocard.value)
+        newItem.appendChild(document.createTextNode(videocard.title))
         first.appendChild(newItem)
         const newItem2 = document.createElement("option")
-        newItem2.setAttribute("value", processor.value)
-        newItem2.appendChild(document.createTextNode(processor.title))
+        newItem2.setAttribute("value", videocard.value)
+        newItem2.appendChild(document.createTextNode(videocard.title))
         second.appendChild(newItem2)
 
 
@@ -43,19 +43,19 @@
     }
   }
 
-async function readTasks() {
-    processors = []
-    const logPrc1 = await db.collection("processors").get()
-    for (doc of logPrc1.docs) {
-    processors.push({
+async function readVC() {
+    videocards = []
+    const logVCS = await db.collection("videocards").get()
+    for (doc of logVCS.docs) {
+    videocards.push({
         id: doc.id,
         title: doc.data().title,
         value: doc.data().value,
         })
     }
-    renderTasks()
+    renderVC()
 }
-readTasks()
+readVC()
 
 function visibilitytable(){
   const table = document.getElementById("compare").style

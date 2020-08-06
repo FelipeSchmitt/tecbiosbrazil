@@ -1,0 +1,327 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/stylegpucompare.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+    <script src="select2.min.js"></script>
+    <title>GPU-Compare</title>
+</head>
+<body>
+    <header>
+		<img src="images/menu.png" onclick="dropdown()">
+		</header>
+		<div id="menudrop" style="visibility: hidden;">
+			<a href="index.html"><div id="box">Home</div></a>
+			<a href="cpuseletor.html"><div id="box">CPU</div></a>
+            <a href="gpuseletor.html"><div id="box">GPU</div></a>
+            <a href="about.html"><div id="box">Sobre</div></a>
+		</div>
+    <script src="js/menu.js"></script>
+
+<div class="corpocompare">
+    
+    <h1>GPU Compare</h1>
+    <div class="grid">
+<div id="center">
+    <select name="" id="first"></select>
+
+    <h3>VS</h3>
+
+    <select name="" id="second"></select>
+</div>
+    </div>
+    <button onclick="alerta()">Comparar</button>
+    <img src="https://www.paulus.com.br/loja/templates/responsivo/images/icons/ajax-loader.gif" id="loading" alt="loading" style="visibility: hidden;">
+    <p>Sistema em Desenvolvimento!</p>
+</div>
+<div class="comparegpu" style="visibility: hidden;">
+<div class="body">
+    <table id="tabletitle">
+        <td colspan="2" id="lightgreen">
+            <h2 id="center">Especificações
+        <td id="lightgreen">
+            <h2 id="title1"></h2>
+        <td id="lightgreen">
+            <h2 id="title2"></h2>
+        </tr>
+        
+    
+    <table id="table2">
+    
+        <td colspan="2" id="lightgreen">
+            <h3 id="yellowtext">Data de Lançamento
+        <td id="lightgreen">
+            <h3 id="release1"></h3>
+        </td>
+        <td id="lightgreen">
+            <h3 id="release2"></h3>
+        </td>
+            </tr>
+    
+        <td colspan="2" id="lightgreen">
+            <h3 id="yellowtext">Preço de Lançamento</h3>
+        <td id="lightgreen">
+            <h3 id="launch_price1"></h3>
+        <td id="lightgreen">
+            <h3 id="launch_price2"></h3>
+                
+            </tr>
+    
+        <td colspan="2" id="lightgreen">
+            <h3 id="yellowtext">Microarquitetura
+        <td id="lightgreen">
+            <h3 id="manufacturing_process1"></h3>
+        <td id="lightgreen">
+            <h3 id="manufacturing_process2"></h3>
+            </tr>
+    </div>
+    
+        <td colspan="2">
+            <h3 id="redtext">Nome de GPU
+        <td>
+            <h3 id="thermal_design_power1"></h3>
+        <td>
+            <h3 id="thermal_design_power2"></h3>
+            </tr>
+    
+        <td colspan="2" id="lightgreen">
+            <h3 id="greentext">Processo de Fabricação
+        <td id="lightgreen">
+            <h3 id="socket1"></h3>
+            <td id="lightgreen">
+            <h3 id="socket2"></h3>
+            </tr>
+    
+        <td colspan="2" id="lightgreen">
+            <h3 id="greentext">Transistores(milhões)
+        <td id="lightgreen">
+            <h3 id="cores1"></h3>
+            <td id="lightgreen">
+            <h3 id="cores2"></h3>
+            </tr>
+    
+        <td colspan="2" id="lightgreen">
+            <h3 id="greentext">TDP
+        <td id="lightgreen">
+            <h3 id="threads1"></h3>
+            <td id="lightgreen">
+            <h3 id="threads2"></h3>
+            </tr>
+    
+        <td colspan="2" id="lightgreen">
+            <h3 id="greentext">Interface
+        <td id="lightgreen">
+            <h3 id="base_frequency1"></h3>
+            <td id="lightgreen">
+            <h3 id="base_frequency2"></h3>
+            </tr>
+    
+        <td colspan="2" id="lightgreen">
+            <h3 id="greentext">Suporte Multi-GPU
+        <td id="lightgreen">
+            <h3 id="turbo_frequency1"></h3>
+            <td id="lightgreen">
+            <h3 id="turbo_frequency2"></h3>
+            </tr>		
+
+        <table>
+            <h2 id="tablecenter">Núcleo</h3>
+        </table>
+            <table id="table2">
+
+        <td colspan="2" id="lightgreen">
+            <h3 id="greentext">Frequência de Base
+        <td id="lightgreen">
+            <h3 id="cache1"></h3>
+            <td id="lightgreen">
+            <h3 id="cache2"></h3>
+            </tr>
+    
+        <td colspan="2" id="lightgreen">
+            <h3 id="greentext">Frequência Boost
+        <td id="lightgreen">
+            <h3 id="multiplier1"></h3>
+            <td id="lightgreen">
+            <h3 id="multiplier2"></h3>
+            </tr>
+    
+        <td colspan="2" id="lightgreen">
+            <h3 id="greentext">Núcleos CUDA
+        <td id="lightgreen">
+            <h3 id="turbo_multiplier1"></h3>
+            <td id="lightgreen">
+            <h3 id="turbo_multiplier2"></h3>
+            </tr>
+    
+        <td colspan="2">
+            <h3><font color="#FF4500">Texture Mapping Units
+        <td>
+            <h3 id="bus_speed1"></h3>
+            <td>
+            <h3 id="bus_speed2"></h3>
+            </tr>
+        
+        <td colspan="2">
+            <h3><font color="#FF4500">ROPs
+        <td>
+            <h3 id="bus_speed1"></h3>
+            <td>
+            <h3 id="bus_speed2"></h3>
+            </tr>
+    
+    
+        <td colspan="2">
+            <h3 id="darkcyantext">Pixel Fill Rate
+        <td>
+            <h3 id="integrated_graphics1"></h3>
+        <td>
+            <h3 id="integrated_graphics2"></h3>
+            </tr>
+    
+        <td colspan="2" id="lightgreen">
+            <h3 id="purpletext">Pixel Fill Rate(Boost)
+        <td id="lightgreen">
+            <h3 id="cinebench_r15_single_core1"></h3>
+        <td id="lightgreen">
+            <h3 id="cinebench_r15_single_core2"></h3>
+            </tr>
+
+        <td colspan="2" id="lightgreen">
+            <h3 id="purpletext">Texture Fill Rate
+        <td id="lightgreen">
+            <h3 id="cinebench_r15_single_core1"></h3>
+        <td id="lightgreen">
+            <h3 id="cinebench_r15_single_core2"></h3>
+            </tr>
+
+        <td colspan="2" id="lightgreen">
+            <h3 id="purpletext">Texture Fill Rate(Boost)
+        <td id="lightgreen">
+            <h3 id="cinebench_r15_single_core1"></h3>
+        <td id="lightgreen">
+            <h3 id="cinebench_r15_single_core2"></h3>
+            </tr>
+
+        </table>
+
+        <table>
+            <h2 id="tablecenter">Memória</h3>
+            </table>
+            <table id="table2">
+
+        <td colspan="2" id="lightgreen">
+            <h3 id="purpletext">Marca Memória
+            <td id="lightgreen">
+            <h3 id="cinebench_r15_multi_core1"></h3>
+        <td id="lightgreen">
+            <h3 id="cinebench_r15_multi_core2"></h3>
+            </tr>
+    
+        <td colspan="2" id="lightgreen">
+            <h3 id="purpletext">Tipo de Memória
+        <td id="lightgreen">
+            <h3 id="cinebench_r15_multi_core1"></h3>
+        <td id="lightgreen">
+            <h3 id="cinebench_r15_multi_core2"></h3>
+            </tr>
+    
+        <td colspan="2" id="lightgreen">
+            <h3 id="purpletext">Tamanho de Memória
+        <td id="lightgreen">
+            <h3 id="passmark_single_thread1"></h3>
+        <td id="lightgreen">
+            <h3 id="passmark_single_thread2"></h3>
+            </tr>
+    
+        <td colspan="2" id="lightgreen">
+            <h3 id="purpletext">Memória velocidade(Eficaz)
+        <td id="lightgreen">
+            <h3 id="passmark_multi_thread1"></h3>
+        <td id="lightgreen">
+            <h3 id="passmark_multi_thread2"></h3>
+            </tr>
+    
+        <td colspan="2">
+            <h3 id="redtext">Bus de Memória
+        <td height="50" width="263">
+            <h3 id="maximum_temperature1"></h3>
+        <td height="50" width="263">
+            <h3 id="maximum_temperature2"></h3>
+            </tr>
+
+        <td colspan="2">
+            <h3 id="redtext">Largura de Banda da Memória
+        <td height="50" width="263">
+            <h3 id="maximum_temperature1"></h3>
+        <td height="50" width="263">
+            <h3 id="maximum_temperature2"></h3>
+            </tr>
+
+        </table>
+            <table>
+            <h2 id="tablecenter">API's Gráficas</h3>
+            </table>
+            <table id="table2">
+
+        <td colspan="2">
+            <h3 id="redtext">DirectX(Nivel)
+        <td height="50" width="263">
+            <h3 id="maximum_temperature1"></h3>
+        <td height="50" width="263">
+            <h3 id="maximum_temperature2"></h3>
+            </tr>
+
+        <td colspan="2">
+            <h3 id="redtext">OpenGL
+        <td height="50" width="263">
+            <h3 id="maximum_temperature1"></h3>
+        <td height="50" width="263">
+            <h3 id="maximum_temperature2"></h3>
+            </tr>
+
+        <td colspan="2">
+            <h3 id="redtext">OpenCL
+        <td height="50" width="263">
+            <h3 id="maximum_temperature1"></h3>
+        <td height="50" width="263">
+            <h3 id="maximum_temperature2"></h3>
+            </tr>
+
+        <td colspan="2">
+            <h3 id="redtext">Vulkan
+        <td height="50" width="263">
+            <h3 id="maximum_temperature1"></h3>
+        <td height="50" width="263">
+            <h3 id="maximum_temperature2"></h3>
+            </tr>
+
+        <td colspan="2">
+            <h3 id="redtext">CUDA
+        <td height="50" width="263">
+            <h3 id="maximum_temperature1"></h3>
+        <td height="50" width="263">
+            <h3 id="maximum_temperature2"></h3>
+            </tr>
+
+        </div>
+    </div>
+
+<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-firestore.js"></script>
+<script src="js/gpucompare.js"></script>
+<script src="js/alert.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#first').select2({});
+    });
+    $(document).ready(function() {
+        $('#second').select2({});
+    });
+    
+</script>

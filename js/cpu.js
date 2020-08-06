@@ -1,4 +1,4 @@
-  var firebaseConfig = {
+var firebaseConfig = {
     apiKey: "AIzaSyCnz9pRjIRmc0-FHlvAKFmsaDXBtvpgWyE",
     authDomain: "tecbiosbrazilcompare-db.firebaseapp.com",
     databaseURL: "https://tecbiosbrazilcompare-db.firebaseio.com",
@@ -16,30 +16,15 @@
   function renderTasks(){
     const first = document.getElementById("first")
     first.innerHTML=""
-    const firstelement = document.getElementById("first")
-    firstelement.innerHTML=""
     const elementcreate = document.createElement("option")
     elementcreate.appendChild(document.createTextNode("Selecione uma CPU:"))
     first.appendChild(elementcreate)
 
-
-    const second = document.getElementById("second")
-    second.innerHTML=""
-    const secondelement = document.createElement("option")
-    secondelement.appendChild(document.createTextNode("Selecione uma CPU:"))
-    second.appendChild(secondelement)
     for (processor of processors){
         const newItem = document.createElement("option")
         newItem.setAttribute("value", processor.value)
         newItem.appendChild(document.createTextNode(processor.title))
         first.appendChild(newItem)
-        const newItem2 = document.createElement("option")
-        newItem2.setAttribute("value", processor.value)
-        newItem2.appendChild(document.createTextNode(processor.title))
-        second.appendChild(newItem2)
-
-
-        
     }
   }
 
@@ -58,19 +43,19 @@ async function readTasks() {
 readTasks()
 
 function visibilitytable(){
-  const table = document.getElementById("compare").style
-  const loading = document.getElementById("loading").style
-  loading.visibility="visible"
-  loading.marginTop="30px"
-  if (table.visibility=="hidden"){
-    setTimeout(function(){
-      table.visibility="visible"
+    const table = document.getElementById("compare").style
+    const loading = document.getElementById("loading").style
+    loading.visibility="visible"
+    loading.marginTop="30px"
+    if (table.visibility=="hidden"){
+      setTimeout(function(){
+        table.visibility="visible"
+        loading.visibility="hidden"
+        loading.marginTop="-120px"
+      }, 2000)
+    }
+    if (table.visibility=="visible"){
       loading.visibility="hidden"
-      loading.marginTop="-5%"
-    }, 2000)
+      loading.marginTop="-120px"
+    }
   }
-  if (table.visibility=="visible"){
-    loading.visibility="hidden"
-    loading.marginTop="-5%"
-  }
-}

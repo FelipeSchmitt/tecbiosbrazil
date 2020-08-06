@@ -1,3 +1,6 @@
+#tablecenter h2{
+    text-align: center;
+}
 .corpocompare h1{
     text-align: center;
     font-family: Arial;
@@ -68,6 +71,77 @@
 .corpocompare h3{
     color: white;
 }
+.body{
+    background-color: white;
+}
+
+.body td{
+    height: 50px;
+    width: 5%;
+}
+#release, #launch_price, #manufacturing_process, #thermal_design_power,
+#socket, #cores, #threads, #base_frequency, #turbo_frequency, #turbo_frequency,
+#turbo_frequency_per_core, #cache, #multiplier, #turbo_multiplier, #bus_speed,
+#instruction, #pci_express, #integrated_graphics, #cinebench_r15_single_core,
+#cinebench_r15_multi_core, #passmark_single_core, #passmark_multi_core,
+#maximum_temperature{
+    text-align: center;
+}
+#instructions{
+    color: #2F4F4F;
+}
+.body h1{
+    text-align: center;
+}
+.body h2{
+    text-align: center;
+    color: black;
+}
+#lightgreen{
+    background-color: #F0FFF0;
+}
+#yellowtext{
+    color: #FFD700;
+}
+#redtext{
+    color: #FF0000;
+}
+.body #table2{
+    margin: auto;
+    width: 80%;
+    border-width: 0;
+}
+#tabletitle{
+    margin: auto;
+    width: 80%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    margin-bottom: 40px;
+}
+#greentext{
+    color: #008000;
+}
+#darkcyantext{
+    color: darkcyan;
+}
+#purpletext{
+    color: #C71585;
+}
+.body #center{
+    text-align: center;
+    color: black;
+    font-family: Arial;
+}
+@media screen and (max-width: 60em) {
+.body #table2{
+    width: 98%;
+}
+#tabletitle{
+    width: 98%;
+}
+}
+
 
 @media screen and (max-width: 60em) {
 .corpocompare button{

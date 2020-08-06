@@ -75,6 +75,10 @@ function renderProcessor2(){
 async function readProcessor2() {
     processors2 = []
     const second = document.getElementById("second").value
+    if (second == "Selecione uma CPU:"){
+        alert("Escolha uma opção:")
+        document.location.reload(true);
+    }else{
     const logPrc2 = await db.collection("processors").where("value", "==", second).get()
     for (doc of logPrc2.docs){
     processors2.push({
@@ -106,4 +110,4 @@ async function readProcessor2() {
     }
     renderProcessor2()
 }
-readProcessor2()
+}
