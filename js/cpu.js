@@ -47,11 +47,10 @@ function visibilitytable(){
     loading.visibility="visible"
     loading.marginTop="30px"
     if (table.visibility=="hidden"){
-      setTimeout(function(){
         table.visibility="visible"
         loading.visibility="hidden"
         loading.marginTop="-120px"
-      }, 2000)
+      }
     }
     if (table.visibility=="visible"){
       loading.visibility="hidden"
