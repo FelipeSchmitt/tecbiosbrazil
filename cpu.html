@@ -23,10 +23,12 @@
 
     <h1>CPU:</h1>
     <div id="center2">
-    <select name="" id="first"></select>
+    <select name="" id="first">
+        <option>Selecione uma CPU:</option>
+    </select>
 </div>
 <img src="https://www.paulus.com.br/loja/templates/responsivo/images/icons/ajax-loader.gif" id="loading" alt="loading" style="visibility: hidden;">
-<button onclick="visibilitytable(), readProcessor()">Analisar</button>
+<button id="btn" onclick="readProcessor()">Analisar</button>
 <div id="compare" style="visibility: hidden;">
     <div class="body">
         <table id="tabletitle">
