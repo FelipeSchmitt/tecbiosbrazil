@@ -19,7 +19,6 @@ var firebaseConfig = {
     const elementcreate = document.createElement("option")
     elementcreate.appendChild(document.createTextNode("Selecione uma CPU:"))
     first.appendChild(elementcreate)
-
     for (processor of processors){
         const newItem = document.createElement("option")
         newItem.setAttribute("value", processor.value)
