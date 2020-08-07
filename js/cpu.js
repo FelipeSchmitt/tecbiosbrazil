@@ -51,7 +51,7 @@ function visibilitytable(){
         loading.visibility="hidden"
         loading.marginTop="-120px"
       }
-    }
+    
     if (table.visibility=="visible"){
       loading.visibility="hidden"
       loading.marginTop="-120px"
