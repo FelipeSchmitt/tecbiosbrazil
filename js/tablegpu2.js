@@ -97,7 +97,7 @@ function renderVC2(){
     pixel_fill_rate_boost2.appendChild(document.createTextNode(videocard2.pixel_fill_rate_boost))
     texture_fill_rate2.appendChild(document.createTextNode(videocard2.texture_fill_rate))
     texture_fill_rate_boost.appendChild(document.createTextNode(videocard2.texture_fill_rate_boost))
-    shaders2.appendChild(document.createTextNode(videocard.shaders))
+    shaders2.appendChild(document.createTextNode(videocard2.shaders))
     brand_memory2.appendChild(document.createTextNode(videocard2.brand_memory))
     memory_type2.appendChild(document.createTextNode(videocard2.memory_type))
     memory_size2.appendChild(document.createTextNode(videocard2.memory_size))
@@ -128,22 +128,25 @@ async function readVC2() {
       release: doc.data().release,
       launch_price: doc.data().launch_price,
       microarchitecture: doc.data().microarchitecture,
-      die_size: doc.data(). die_size,
+      die_size: doc.data().die_size,
       gpu_name: doc.data().gpu_name,
       manufacturing_process: doc.data().manufacturing_process,
       transistors: doc.data(). transistors,
+      thermal_design_power: doc.data().thermal_design_power,
       interface: doc.data(). interface,
       multi_gpu_support: doc.data(). multi_gpu_support,
+      maximum_temperature: doc.data(). maximum_temperature,
+      technologies: doc.data(). technologies,
       base_frequency: doc.data(). base_frequency,
       boost_frequency: doc.data(). boost_frequency,
       cuda_cores: doc.data(). cuda_cores,
-      texture_mapping_units: doc.data(). texture_mapping_units,
-      rops: doc.data(). rops,
-      pixel_fill_rate: doc.data(). pixel_fill_rate,
-      pixel_fill_rate_boost: doc.data(). pixel_fill_rate_boost,
+      texture_mapping_units: doc.data().texture_mapping_units,
+      rops: doc.data().rops,
+      pixel_fill_rate: doc.data().pixel_fill_rate,
+      pixel_fill_rate_boost: doc.data().pixel_fill_rate_boost,
       texture_fill_rate: doc.data(). texture_fill_rate,
       texture_fill_rate_boost: doc.data().texture_fill_rate_boost,
-      shaders: doc.data(). shaders,
+      shaders: doc.data().shaders,
       brand_memory: doc.data(). brand_memory,
       memory_type: doc.data(). memory_type,
       memory_size: doc.data(). memory_size,
@@ -157,6 +160,7 @@ async function readVC2() {
       cuda: doc.data(). cuda,
       mark3d: doc.data(). mark3d,
       pcmark: doc.data(). pcmark,
+
         })
     }
     renderVC2()
