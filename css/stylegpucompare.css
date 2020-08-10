@@ -7,6 +7,9 @@
     font-weight: 600;
     color: white;
 }
+#btn{
+    margin-bottom: 50px;
+}
 .corpocompare p{
     text-align: center;
     color: red;
