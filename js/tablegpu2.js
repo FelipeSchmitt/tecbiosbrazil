@@ -34,6 +34,8 @@ function renderVC2(){
   boost_frequency2.innerHTML=""
   const cuda_cores2 = document.getElementById("cuda_cores2")
   cuda_cores2.innerHTML=""
+  const stream_processors2 = document.getElementById("stream_processors2")
+  stream_processors2.innerHTML=""
   const texture_mapping_units2 = document.getElementById("texture_mapping_units2")
   texture_mapping_units2.innerHTML=""
   const rops2 = document.getElementById("rops2")
@@ -70,6 +72,8 @@ function renderVC2(){
   vulkan2.innerHTML=""
   const cuda2 = document.getElementById("cuda2")
   cuda2.innerHTML=""
+  const stream2 = document.getElementById("stream2")
+  stream2.innerHTML=""
   const mark3d2 = document.getElementById("mark3d2")
   mark3d2.innerHTML=""
   const pcmark2 = document.getElementById("pcmark2") 
@@ -109,6 +113,7 @@ function renderVC2(){
     opencl2.appendChild(document.createTextNode(videocard2.opencl))
     vulkan2.appendChild(document.createTextNode(videocard2.vulkan))
     cuda2.appendChild(document.createTextNode(videocard2.cuda))
+    stream2.appendChild(document.createTextNode(videocard2.stream2))
     mark3d2.appendChild(document.createTextNode(videocard2.mark3d))
     pcmark2.appendChild(document.createTextNode(videocard2.pcmark))
   }
@@ -140,6 +145,7 @@ async function readVC2() {
       base_frequency: doc.data(). base_frequency,
       boost_frequency: doc.data(). boost_frequency,
       cuda_cores: doc.data(). cuda_cores,
+      stream_processors: doc.data(). stream_processors,
       texture_mapping_units: doc.data().texture_mapping_units,
       rops: doc.data().rops,
       pixel_fill_rate: doc.data().pixel_fill_rate,
@@ -158,6 +164,7 @@ async function readVC2() {
       opencl: doc.data(). opencl,
       vulkan: doc.data(). vulkan,
       cuda: doc.data(). cuda,
+      stream: doc.data(). stream,
       mark3d: doc.data(). mark3d,
       pcmark: doc.data(). pcmark,
 

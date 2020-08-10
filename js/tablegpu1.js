@@ -34,6 +34,8 @@ function renderVC1(){
   boost_frequency1.innerHTML=""
   const cuda_cores1 = document.getElementById("cuda_cores1")
   cuda_cores1.innerHTML=""
+  const stream_processors1 = document.getElementById("stream_processors1")
+  stream_processors1.innerHTML=""
   const texture_mapping_units1 = document.getElementById("texture_mapping_units1")
   texture_mapping_units1.innerHTML=""
   const rops1 = document.getElementById("rops1")
@@ -70,6 +72,8 @@ function renderVC1(){
   vulkan1.innerHTML=""
   const cuda1 = document.getElementById("cuda1")
   cuda1.innerHTML=""
+  const stream1 = document.getElementById("stream1")
+  stream1.innerHTML=""
   const mark3d1 = document.getElementById("mark3d1")
   mark3d1.innerHTML=""
   const pcmark1 = document.getElementById("pcmark1") 
@@ -92,6 +96,7 @@ function renderVC1(){
       base_frequency1.appendChild(document.createTextNode(videocard.base_frequency))
       boost_frequency1.appendChild(document.createTextNode(videocard.boost_frequency))
       cuda_cores1.appendChild(document.createTextNode(videocard.cuda_cores))
+      stream_processors1.appendChild(document.createTextNode(videocard.stream_processors))
       texture_mapping_units1.appendChild(document.createTextNode(videocard.texture_mapping_units))
       rops1.appendChild(document.createTextNode(videocard.rops))
       pixel_fill_rate1.appendChild(document.createTextNode(videocard.pixel_fill_rate))
@@ -110,6 +115,7 @@ function renderVC1(){
       opencl1.appendChild(document.createTextNode(videocard.opencl))
       vulkan1.appendChild(document.createTextNode(videocard.vulkan))
       cuda1.appendChild(document.createTextNode(videocard.cuda))
+      stream1.appendChild(document.createTextNode(videocard.stream))
       mark3d1.appendChild(document.createTextNode(videocard.mark3d))
       pcmark1.appendChild(document.createTextNode(videocard.pcmark))
 
