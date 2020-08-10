@@ -10,7 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
     <script src="select2.min.js"></script>
-    <title>GPU-Compare</title>
+    <title>TecBios-GPU</title>
 </head>
 <body>
     <header>
@@ -32,27 +32,20 @@
     <select name="" id="first">
         <option>Selecione uma GPU:</option>
     </select>
-
-    <h3>VS</h3>
-
-    <select name="" id="second">
-        <option>Selecione uma GPU:</option>
-    </select>
 </div>
     </div>
     <button id="btn" onclick="verification()">Comparar</button>
     <img src="https://www.paulus.com.br/loja/templates/responsivo/images/icons/ajax-loader.gif" id="loading" alt="loading" style="visibility: hidden;">
 
 </div>
-<div id="comparegpu" style="visibility: visible;">
+<div id="comparegpu" style="visibility: hidden;">
 <div class="body">
     <table id="tabletitle">
         <td colspan="2" id="lightgreen">
             <h2 id="center">Especificações
         <td id="lightgreen">
             <h2 id="title1"></h2>
-        <td id="lightgreen">
-            <h2 id="title2"></h2>
+
         </tr>
         
     
@@ -63,17 +56,12 @@
         <td id="lightgreen">
             <h3 id="release1"></h3>
         </td>
-        <td id="lightgreen">
-            <h3 id="release2"></h3>
-        </td>
             </tr>
     
         <td colspan="2" id="lightgreen">
             <h3 id="yellowtext">Preço de Lançamento</h3>
         <td id="lightgreen">
             <h3 id="launch_price1"></h3>
-        <td id="lightgreen">
-            <h3 id="launch_price2"></h3>
                 
             </tr>
     
@@ -81,16 +69,12 @@
             <h3 id="yellowtext">Microarquitetura
         <td id="lightgreen">
             <h3 id="microarchitecture1"></h3>
-        <td id="lightgreen">
-            <h3 id="microarchitecture2"></h3>
             </tr>
 
         <td colspan="2" id="lightgreen">
             <h3 id="yellowtext">Die Size
         <td id="lightgreen">
             <h3 id="die_size1"></h3>
-        <td id="lightgreen">
-            <h3 id="die_size2"></h3>
             </tr>
     </div>
     
@@ -98,64 +82,48 @@
             <h3 id="redtext">Nome de GPU
         <td>
             <h3 id="gpu_name1"></h3>
-        <td>
-            <h3 id="gpu_name2"></h3>
             </tr>
     
         <td colspan="2" id="lightgreen">
             <h3 id="greentext">Processo de Fabricação
         <td id="lightgreen">
             <h3 id="manufacturing_process1"></h3>
-            <td id="lightgreen">
-            <h3 id="manufacturing_process2"></h3>
             </tr>
     
         <td colspan="2" id="lightgreen">
             <h3 id="greentext">Transistores(milhões)
         <td id="lightgreen">
             <h3 id="transistors1"></h3>
-            <td id="lightgreen">
-            <h3 id="transistors2"></h3>
             </tr>
     
         <td colspan="2" id="lightgreen">
             <h3 id="greentext">TDP
         <td id="lightgreen">
             <h3 id="thermal_design_power1"></h3>
-            <td id="lightgreen">
-            <h3 id="thermal_design_power2"></h3>
             </tr>
     
         <td colspan="2" id="lightgreen">
             <h3 id="greentext">Interface
         <td id="lightgreen">
             <h3 id="interface1"></h3>
-            <td id="lightgreen">
-            <h3 id="interface2"></h3>
             </tr>
     
         <td colspan="2" id="lightgreen">
             <h3 id="greentext">Suporte Multi-GPU
         <td id="lightgreen">
             <h3 id="multi_gpu_support1"></h3>
-            <td id="lightgreen">
-            <h3 id="multi_gpu_support2"></h3>
             </tr>		
 
         <td colspan="2">
             <h3 id="redtext">Temperatura Máxima
         <td>
             <h3 id="maximum_temperature1"></h3>
-        <td>
-            <h3 id="maximum_temperature2"></h3>
             </tr>
 
         <td colspan="2">
             <h3 id="redtext">Tecnologias
         <td height="50" width="263">
             <h3 id="technologies1"></h3>
-        <td height="50" width="263">
-            <h3 id="technologies2"></h3>
             </tr>
 
         <table>
@@ -167,40 +135,30 @@
             <h3 id="greentext">Frequência de Base
         <td id="lightgreen">
             <h3 id="base_frequency1"></h3>
-            <td id="lightgreen">
-            <h3 id="base_frequency2"></h3>
             </tr>
     
         <td colspan="2" id="lightgreen">
             <h3 id="greentext">Frequência Boost
         <td id="lightgreen">
             <h3 id="boost_frequency1"></h3>
-            <td id="lightgreen">
-            <h3 id="boost_frequency2"></h3>
             </tr>
     
         <td colspan="2" id="lightgreen">
             <h3 id="greentext">Núcleos CUDA
         <td id="lightgreen">
             <h3 id="cuda_cores1"></h3>
-            <td id="lightgreen">
-            <h3 id="cuda_cores2"></h3>
             </tr>
     
         <td colspan="2">
             <h3><font color="#FF4500">Texture Mapping Units
         <td>
             <h3 id="texture_mapping_units1"></h3>
-            <td>
-            <h3 id="texture_mapping_units2"></h3>
             </tr>
         
         <td colspan="2">
             <h3><font color="#FF4500">ROPs
         <td>
             <h3 id="rops1"></h3>
-            <td>
-            <h3 id="rops2"></h3>
             </tr>
     
     
@@ -208,40 +166,30 @@
             <h3 id="darkcyantext">Pixel Fill Rate
         <td>
             <h3 id="pixel_fill_rate1"></h3>
-        <td>
-            <h3 id="pixel_fill_rate2"></h3>
             </tr>
     
         <td colspan="2" id="lightgreen">
             <h3 id="purpletext">Pixel Fill Rate(Boost)
         <td id="lightgreen">
             <h3 id="pixel_fill_rate_boost1"></h3>
-        <td id="lightgreen">
-            <h3 id="pixel_fill_rate_boost2"></h3>
             </tr>
 
         <td colspan="2" id="lightgreen">
             <h3 id="purpletext">Texture Fill Rate
         <td id="lightgreen">
             <h3 id="texture_fill_rate1"></h3>
-        <td id="lightgreen">
-            <h3 id="texture_fill_rate2"></h3>
             </tr>
 
         <td colspan="2" id="lightgreen">
             <h3 id="purpletext">Texture Fill Rate(Boost)
         <td id="lightgreen">
             <h3 id="texture_fill_rate_boost1"></h3>
-        <td id="lightgreen">
-            <h3 id="texture_fill_rate_boost2"></h3>
             </tr>
 
         <td colspan="2" id="lightgreen">
             <h3 id="purpletext">Shaders
         <td id="lightgreen">
             <h3 id="shaders1"></h3>
-        <td id="lightgreen">
-            <h3 id="shaders2"></h3>
             </tr>
 
         </table>
@@ -255,48 +203,36 @@
             <h3 id="purpletext">Marca Memória
             <td id="lightgreen">
             <h3 id="brand_memory1"></h3>
-        <td id="lightgreen">
-            <h3 id="brand_memory2"></h3>
             </tr>
     
         <td colspan="2" id="lightgreen">
             <h3 id="purpletext">Tipo de Memória
         <td id="lightgreen">
             <h3 id="memory_type1"></h3>
-        <td id="lightgreen">
-            <h3 id="memory_type2"></h3>
             </tr>
     
         <td colspan="2" id="lightgreen">
             <h3 id="purpletext">Tamanho de Memória
         <td id="lightgreen">
             <h3 id="memory_size1"></h3>
-        <td id="lightgreen">
-            <h3 id="memory_size2"></h3>
             </tr>
     
         <td colspan="2" id="lightgreen">
             <h3 id="purpletext">Memória velocidade(Eficaz)
         <td id="lightgreen">
             <h3 id="memory_speed1"></h3>
-        <td id="lightgreen">
-            <h3 id="memory_speed2"></h3>
             </tr>
     
         <td colspan="2">
             <h3 id="redtext">Bus de Memória
         <td height="50" width="263">
             <h3 id="memory_bus1"></h3>
-        <td height="50" width="263">
-            <h3 id="memory_bus2"></h3>
             </tr>
 
         <td colspan="2">
             <h3 id="redtext">Largura de Banda da Memória
         <td height="50" width="263">
             <h3 id="memory_bandwidth1"></h3>
-        <td height="50" width="263">
-            <h3 id="memory_bandwidth2"></h3>
             </tr>
 
         </table>
@@ -309,40 +245,30 @@
             <h3 id="redtext">DirectX(Nivel)
         <td height="50" width="263">
             <h3 id="directx1"></h3>
-        <td height="50" width="263">
-            <h3 id="directx2"></h3>
             </tr>
 
         <td colspan="2">
             <h3 id="redtext">OpenGL
         <td height="50" width="263">
             <h3 id="opengl1"></h3>
-        <td height="50" width="263">
-            <h3 id="opengl2"></h3>
             </tr>
 
         <td colspan="2">
             <h3 id="redtext">OpenCL
         <td height="50" width="263">
             <h3 id="opencl1"></h3>
-        <td height="50" width="263">
-            <h3 id="opencl2"></h3>
             </tr>
 
         <td colspan="2">
             <h3 id="redtext">Vulkan
         <td height="50" width="263">
             <h3 id="vulkan1"></h3>
-        <td height="50" width="263">
-            <h3 id="vulkan2"></h3>
             </tr>
 
         <td colspan="2">
             <h3 id="redtext">CUDA
         <td height="50" width="263">
             <h3 id="cuda1"></h3>
-        <td height="50" width="263">
-            <h3 id="cuda2"></h3>
             </tr>
 
         </table>
@@ -355,16 +281,14 @@
             <h3 id="redtext">3DMark
         <td height="50" width="263">
             <h3 id="mark3d1"></h3>
-        <td height="50" width="263">
-            <h3 id="mark3d2"></h3>
+
         </tr>
 
         <td colspan="2">
             <h3 id="redtext">PCMark
         <td height="50" width="263">
             <h3 id="pcmark1"></h3>
-        <td height="50" width="263">
-            <h3 id="pcmark2"></h3>
+
             </tr>
 
         </div>
@@ -372,9 +296,8 @@
 
 <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-firestore.js"></script>
-<script src="js/gpucompare.js"></script>
+<script src="js/gpu.js"></script>
 <script src="js/tablegpu1.js"></script>
-<script src="js/tablegpu2.js"></script>
 <script src="js/alert.js"></script>
 <script>
     $(document).ready(function() {

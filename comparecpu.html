@@ -29,14 +29,18 @@
     <h1>Cpu Compare</h1>
     <div class="grid">
 <div id="center">
-    <select name="" id="first"></select>
+    <select name="" id="first">
+        <option>Selecione uma CPU:</option>
+    </select>
 
     <h3>VS</h3>
 
-    <select name="" id="second"></select>
+    <select name="" id="second">
+        <option>Selecione uma CPU:</option>
+    </select>
 </div>
     </div>
-    <button onclick="visibilitytable(), readProcessor(), readProcessor2()">Comparar</button>
+    <button id="btn" onclick="verification()">Comparar</button>
     <img src="https://www.paulus.com.br/loja/templates/responsivo/images/icons/ajax-loader.gif" id="loading" alt="loading" style="visibility: hidden;">
 
 </div>

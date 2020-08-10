@@ -70,7 +70,6 @@ function renderProcessor(){
       passmark_multi_thread1.appendChild(document.createTextNode(processor.passmark_multi_thread))
       maximum_temperature1.appendChild(document.createTextNode(processor.maximum_temperature))
   }
-  visibilitytable()
   document.getElementById("btn").disabled = false;
 }
 
@@ -78,10 +77,6 @@ function renderProcessor(){
 async function readProcessor() {
     processors = []
     const first = document.getElementById("first").value
-    if (first == "Selecione uma CPU:" || first == ""){
-      alert("Selecione uma opção!")
-    }
-    else{
     document.getElementById("btn").disabled = true;
     const logPrc = await db.collection("processors").where("value", "==", first).get()
     for (doc of logPrc.docs){
@@ -113,6 +108,4 @@ async function readProcessor() {
         })
     }
     renderProcessor()
-}
-
 }

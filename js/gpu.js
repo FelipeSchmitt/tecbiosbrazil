@@ -17,21 +17,21 @@ var firebaseConfig = {
     const first = document.getElementById("first")
     first.innerHTML=""
     const elementcreate = document.createElement("option")
-    elementcreate.appendChild(document.createTextNode("Selecione uma CPU:"))
+    elementcreate.appendChild(document.createTextNode("Selecione uma GPU:"))
     first.appendChild(elementcreate)
-    for (processor of processors){
+    for (videocard of videocards){
         const newItem = document.createElement("option")
-        newItem.setAttribute("value", processor.value)
-        newItem.appendChild(document.createTextNode(processor.title))
+        newItem.setAttribute("value", videocard.value)
+        newItem.appendChild(document.createTextNode(videocard.title))
         first.appendChild(newItem)
     }
   }
 
 async function readTasks() {
-    processors = []
-    const logPrc1 = await db.collection("processors").get()
+    videocards = []
+    const logPrc1 = await db.collection("videocards").get()
     for (doc of logPrc1.docs) {
-    processors.push({
+    videocards.push({
         id: doc.id,
         title: doc.data().title,
         value: doc.data().value,
@@ -42,20 +42,20 @@ async function readTasks() {
 readTasks()
 
 function visibilitytable(){
-    const table = document.getElementById("compare").style
+    const table = document.getElementById("comparegpu").style
     const loading = document.getElementById("loading").style
     loading.visibility="visible"
-    loading.marginTop="30px"
+    loading.marginTop="40px"
     if (table.visibility=="hidden"){
       setTimeout(function(){
         table.visibility="visible"
         loading.visibility="hidden"
-        loading.marginTop="-120px"
+        loading.marginTop="-40px"
       }, 250)
     }
     if (table.visibility=="visible"){
       loading.visibility="hidden"
-      loading.marginTop="-120px"
+      loading.marginTop="-40px"
     }
   }
   function verification(){
@@ -65,11 +65,11 @@ function visibilitytable(){
     const texto = option.textContent;
     const titletext = document.getElementById("title1").innerHTML
     
-    if (first == "Selecione uma CPU:" || first == "" || texto == titletext){
+    if (first == "Selecione uma GPU:" || first == "" || texto == titletext){
       alert("Selecione uma opção, ou outra diferente!")
     }
     else{
-    readProcessor()
+    readVC1()
     visibilitytable()
 }
 }

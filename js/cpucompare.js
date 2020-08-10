@@ -63,14 +63,32 @@ function visibilitytable(){
   loading.visibility="visible"
   loading.marginTop="30px"
   if (table.visibility=="hidden"){
-    setTimeout(function(){
       table.visibility="visible"
       loading.visibility="hidden"
       loading.marginTop="-5%"
-    }, 2000)
   }
   if (table.visibility=="visible"){
     loading.visibility="hidden"
     loading.marginTop="-5%"
   }
+}
+
+function verification(){
+  const first = document.getElementById("first").value
+  const second = document.getElementById("second").value
+  const select = document.getElementById('first');
+  const option = select.children[select.selectedIndex];
+  const texto = option.textContent;
+  const titletext = document.getElementById("title1").innerHTML
+  const select2 = document.getElementById('second');
+  const option2 = select2.children[select2.selectedIndex];
+  const texto2 = option2.textContent;
+  const titletext2 = document.getElementById("title2").innerHTML
+  if (titletext == texto && titletext2 == texto2 ||second == "Selecione uma CPU:" || second == "" || first == second || first == "" || first == "Selecione uma CPU:"){
+    alert("Selecione uma opção, ou escolha duas distintas!")
+  }
+  else{
+    readProcessor()
+    readProcessor2()
+    }
 }
