@@ -68,10 +68,8 @@ function renderVC2(){
   vulkan2.innerHTML=""
   const cuda2 = document.getElementById("cuda2")
   cuda2.innerHTML=""
-  const mark3d2 = document.getElementById("mark3d2")
-  mark3d2.innerHTML=""
-  const pcmark2 = document.getElementById("pcmark2") 
-  pcmark2.innerHTML=""
+  const g3d_mark2 = document.getElementById("g3d_mark2") 
+  g3d_mark2.innerHTML=""
   for(videocard2 of videocards2){
     title2.appendChild(document.createTextNode(videocard2.title))
     release2.appendChild(document.createTextNode(videocard2.release))
@@ -106,8 +104,7 @@ function renderVC2(){
     opencl2.appendChild(document.createTextNode(videocard2.opencl))
     vulkan2.appendChild(document.createTextNode(videocard2.vulkan))
     cuda2.appendChild(document.createTextNode(videocard2.cuda))
-    mark3d2.appendChild(document.createTextNode(videocard2.mark3d))
-    pcmark2.appendChild(document.createTextNode(videocard2.pcmark))
+    g3d_mark2.appendChild(document.createTextNode(videocard2.g3d_mark2))
   }
     visibilitytable()
     document.getElementById("btn").disabled=false;
@@ -135,7 +132,6 @@ async function readVC2() {
       maximum_temperature: doc.data(). maximum_temperature,
       base_frequency: doc.data(). base_frequency,
       boost_frequency: doc.data(). boost_frequency,
-      cuda_cores: doc.data(). cuda_cores,
       shading_units: doc.data(). shading_units,
       rt_cores: doc.data(). rt_cores,
       texture_mapping_units: doc.data().texture_mapping_units,
@@ -144,7 +140,6 @@ async function readVC2() {
       pixel_fill_rate_boost: doc.data().pixel_fill_rate_boost,
       texture_fill_rate: doc.data(). texture_fill_rate,
       texture_fill_rate_boost: doc.data().texture_fill_rate_boost,
-      brand_memory: doc.data(). brand_memory,
       memory_type: doc.data(). memory_type,
       memory_size: doc.data(). memory_size,
       memory_speed: doc.data(). memory_speed,
@@ -155,8 +150,7 @@ async function readVC2() {
       opencl: doc.data(). opencl,
       vulkan: doc.data(). vulkan,
       cuda: doc.data(). cuda,
-      mark3d: doc.data(). mark3d,
-      pcmark: doc.data(). pcmark,
+      g3d_mark: doc.data(). g3d_mark,
 
         })
     }

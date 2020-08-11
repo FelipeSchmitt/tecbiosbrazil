@@ -46,8 +46,6 @@ function renderVC1(){
   texture_fill_rate1.innerHTML=""
   const texture_fill_rate_boost = document.getElementById("texture_fill_rate_boost1")
   texture_fill_rate_boost.innerHTML=""
-  const brand_memory1 = document.getElementById("brand_memory1")
-  brand_memory1.innerHTML=""
   const memory_type1 = document.getElementById("memory_type1")
   memory_type1.innerHTML=""
   const memory_size1 = document.getElementById("memory_size1")
@@ -68,10 +66,8 @@ function renderVC1(){
   vulkan1.innerHTML=""
   const cuda1 = document.getElementById("cuda1")
   cuda1.innerHTML=""
-  const mark3d1 = document.getElementById("mark3d1")
-  mark3d1.innerHTML=""
-  const pcmark1 = document.getElementById("pcmark1") 
-  pcmark1.innerHTML=""
+  const g3d_mark1 = document.getElementById("g3d_mark1") 
+  g3d_mark1.innerHTML=""
 
   for(videocard of videocards){
       title1.appendChild(document.createTextNode(videocard.title))
@@ -96,7 +92,6 @@ function renderVC1(){
       pixel_fill_rate_boost1.appendChild(document.createTextNode(videocard.pixel_fill_rate_boost))
       texture_fill_rate1.appendChild(document.createTextNode(videocard.texture_fill_rate))
       texture_fill_rate_boost.appendChild(document.createTextNode(videocard.texture_fill_rate_boost))
-      brand_memory1.appendChild(document.createTextNode(videocard.brand_memory))
       memory_type1.appendChild(document.createTextNode(videocard.memory_type))
       memory_size1.appendChild(document.createTextNode(videocard.memory_size))
       memory_speed1.appendChild(document.createTextNode(videocard.memory_speed))
@@ -107,8 +102,7 @@ function renderVC1(){
       opencl1.appendChild(document.createTextNode(videocard.opencl))
       vulkan1.appendChild(document.createTextNode(videocard.vulkan))
       cuda1.appendChild(document.createTextNode(videocard.cuda))
-      mark3d1.appendChild(document.createTextNode(videocard.mark3d))
-      pcmark1.appendChild(document.createTextNode(videocard.pcmark))
+      g3d_mark1.appendChild(document.createTextNode(videocard.g3d_mark))
 
 
     }
@@ -137,7 +131,6 @@ async function readVC1() {
         maximum_temperature: doc.data(). maximum_temperature,
         base_frequency: doc.data(). base_frequency,
         boost_frequency: doc.data(). boost_frequency,
-        cuda_cores: doc.data(). cuda_cores,
         shading_units: doc.data(). shading_units,
         rt_cores: doc.data(). rt_cores,
         texture_mapping_units: doc.data().texture_mapping_units,
@@ -146,7 +139,6 @@ async function readVC1() {
         pixel_fill_rate_boost: doc.data().pixel_fill_rate_boost,
         texture_fill_rate: doc.data(). texture_fill_rate,
         texture_fill_rate_boost: doc.data().texture_fill_rate_boost,
-        brand_memory: doc.data(). brand_memory,
         memory_type: doc.data(). memory_type,
         memory_size: doc.data(). memory_size,
         memory_speed: doc.data(). memory_speed,
@@ -157,8 +149,7 @@ async function readVC1() {
         opencl: doc.data(). opencl,
         vulkan: doc.data(). vulkan,
         cuda: doc.data(). cuda,
-        mark3d: doc.data(). mark3d,
-        pcmark: doc.data(). pcmark,
+        g3d_mark: doc.data(). g3d_mark,
 
     })
 }
