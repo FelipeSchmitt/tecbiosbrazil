@@ -46,8 +46,6 @@ function renderVC2(){
   texture_fill_rate2.innerHTML=""
   const texture_fill_rate_boost = document.getElementById("texture_fill_rate_boost2")
   texture_fill_rate_boost.innerHTML=""
-  const brand_memory2 = document.getElementById("brand_memory2")
-  brand_memory2.innerHTML=""
   const memory_type2 = document.getElementById("memory_type2")
   memory_type2.innerHTML=""
   const memory_size2 = document.getElementById("memory_size2")
@@ -93,7 +91,6 @@ function renderVC2(){
     pixel_fill_rate_boost2.appendChild(document.createTextNode(videocard2.pixel_fill_rate_boost))
     texture_fill_rate2.appendChild(document.createTextNode(videocard2.texture_fill_rate))
     texture_fill_rate_boost.appendChild(document.createTextNode(videocard2.texture_fill_rate_boost))
-    brand_memory2.appendChild(document.createTextNode(videocard2.brand_memory))
     memory_type2.appendChild(document.createTextNode(videocard2.memory_type))
     memory_size2.appendChild(document.createTextNode(videocard2.memory_size))
     memory_speed2.appendChild(document.createTextNode(videocard2.memory_speed))
@@ -104,7 +101,7 @@ function renderVC2(){
     opencl2.appendChild(document.createTextNode(videocard2.opencl))
     vulkan2.appendChild(document.createTextNode(videocard2.vulkan))
     cuda2.appendChild(document.createTextNode(videocard2.cuda))
-    g3d_mark2.appendChild(document.createTextNode(videocard2.g3d_mark2))
+    g3d_mark2.appendChild(document.createTextNode(videocard2.g3d_mark))
   }
     visibilitytable()
     document.getElementById("btn").disabled=false;
