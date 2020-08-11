@@ -26,16 +26,14 @@ function renderVC1(){
   multi_gpu_support1.innerHTML=""
   const maximum_temperature1 = document.getElementById("maximum_temperature1")
   maximum_temperature1.innerHTML=""
-  const technologies1 = document.getElementById("technologies1")
-  technologies1.innerHTML=""
   const base_frequency1 = document.getElementById("base_frequency1")
   base_frequency1.innerHTML=""
   const boost_frequency1 = document.getElementById("boost_frequency1")
   boost_frequency1.innerHTML=""
-  const cuda_cores1 = document.getElementById("cuda_cores1")
-  cuda_cores1.innerHTML=""
-  const stream_processors1 = document.getElementById("stream_processors1")
-  stream_processors1.innerHTML=""
+  const shading_units1 = document.getElementById("shading_units1")
+  shading_units1.innerHTML=""
+  const rt_cores1 = document.getElementById("rt_cores1")
+  rt_cores1.innerHTML=""
   const texture_mapping_units1 = document.getElementById("texture_mapping_units1")
   texture_mapping_units1.innerHTML=""
   const rops1 = document.getElementById("rops1")
@@ -48,8 +46,6 @@ function renderVC1(){
   texture_fill_rate1.innerHTML=""
   const texture_fill_rate_boost = document.getElementById("texture_fill_rate_boost1")
   texture_fill_rate_boost.innerHTML=""
-  const shaders1 = document.getElementById("shaders1")
-  shaders1.innerHTML=""
   const brand_memory1 = document.getElementById("brand_memory1")
   brand_memory1.innerHTML=""
   const memory_type1 = document.getElementById("memory_type1")
@@ -72,8 +68,6 @@ function renderVC1(){
   vulkan1.innerHTML=""
   const cuda1 = document.getElementById("cuda1")
   cuda1.innerHTML=""
-  const stream1 = document.getElementById("stream1")
-  stream1.innerHTML=""
   const mark3d1 = document.getElementById("mark3d1")
   mark3d1.innerHTML=""
   const pcmark1 = document.getElementById("pcmark1") 
@@ -92,18 +86,16 @@ function renderVC1(){
       interface1.appendChild(document.createTextNode(videocard.interface))
       multi_gpu_support1.appendChild(document.createTextNode(videocard.multi_gpu_support))
       maximum_temperature1.appendChild(document.createTextNode(videocard.maximum_temperature))
-      technologies1.appendChild(document.createTextNode(videocard.technologies))
       base_frequency1.appendChild(document.createTextNode(videocard.base_frequency))
       boost_frequency1.appendChild(document.createTextNode(videocard.boost_frequency))
-      cuda_cores1.appendChild(document.createTextNode(videocard.cuda_cores))
-      stream_processors1.appendChild(document.createTextNode(videocard.stream_processors))
+      shading_units1.appendChild(document.createTextNode(videocard.shading_units))
+      rt_cores1.appendChild(document.createTextNode(videocard.rt_cores))
       texture_mapping_units1.appendChild(document.createTextNode(videocard.texture_mapping_units))
       rops1.appendChild(document.createTextNode(videocard.rops))
       pixel_fill_rate1.appendChild(document.createTextNode(videocard.pixel_fill_rate))
       pixel_fill_rate_boost1.appendChild(document.createTextNode(videocard.pixel_fill_rate_boost))
       texture_fill_rate1.appendChild(document.createTextNode(videocard.texture_fill_rate))
       texture_fill_rate_boost.appendChild(document.createTextNode(videocard.texture_fill_rate_boost))
-      shaders1.appendChild(document.createTextNode(videocard.shaders))
       brand_memory1.appendChild(document.createTextNode(videocard.brand_memory))
       memory_type1.appendChild(document.createTextNode(videocard.memory_type))
       memory_size1.appendChild(document.createTextNode(videocard.memory_size))
@@ -115,7 +107,6 @@ function renderVC1(){
       opencl1.appendChild(document.createTextNode(videocard.opencl))
       vulkan1.appendChild(document.createTextNode(videocard.vulkan))
       cuda1.appendChild(document.createTextNode(videocard.cuda))
-      stream1.appendChild(document.createTextNode(videocard.stream))
       mark3d1.appendChild(document.createTextNode(videocard.mark3d))
       pcmark1.appendChild(document.createTextNode(videocard.pcmark))
 
@@ -144,17 +135,17 @@ async function readVC1() {
         interface: doc.data(). interface,
         multi_gpu_support: doc.data(). multi_gpu_support,
         maximum_temperature: doc.data(). maximum_temperature,
-        technologies: doc.data(). technologies,
         base_frequency: doc.data(). base_frequency,
         boost_frequency: doc.data(). boost_frequency,
         cuda_cores: doc.data(). cuda_cores,
+        shading_units: doc.data(). shading_units,
+        rt_cores: doc.data(). rt_cores,
         texture_mapping_units: doc.data().texture_mapping_units,
         rops: doc.data().rops,
         pixel_fill_rate: doc.data().pixel_fill_rate,
         pixel_fill_rate_boost: doc.data().pixel_fill_rate_boost,
         texture_fill_rate: doc.data(). texture_fill_rate,
         texture_fill_rate_boost: doc.data().texture_fill_rate_boost,
-        shaders: doc.data().shaders,
         brand_memory: doc.data(). brand_memory,
         memory_type: doc.data(). memory_type,
         memory_size: doc.data(). memory_size,
