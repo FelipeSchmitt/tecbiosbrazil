@@ -13,34 +13,6 @@ var firebaseConfig = {
 
   const db = firebase.firestore()
 
-  function renderTasks(){
-    const first = document.getElementById("first")
-    first.innerHTML=""
-    const elementcreate = document.createElement("option")
-    elementcreate.appendChild(document.createTextNode("Selecione uma CPU:"))
-    first.appendChild(elementcreate)
-    for (processor of processors){
-        const newItem = document.createElement("option")
-        newItem.setAttribute("value", processor.value)
-        newItem.appendChild(document.createTextNode(processor.title))
-        first.appendChild(newItem)
-    }
-  }
-
-async function readTasks() {
-    processors = []
-    const logPrc1 = await db.collection("processors").get()
-    for (doc of logPrc1.docs) {
-    processors.push({
-        id: doc.id,
-        title: doc.data().title,
-        value: doc.data().value,
-        })
-    }
-    renderTasks()
-}
-readTasks()
-
 function visibilitytable(){
     const table = document.getElementById("compare").style
     const loading = document.getElementById("loading").style

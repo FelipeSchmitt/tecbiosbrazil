@@ -13,49 +13,6 @@
 
   const db = firebase.firestore()
 
-  function renderTasks(){
-    const first = document.getElementById("first")
-    first.innerHTML=""
-    const firstelement = document.getElementById("first")
-    firstelement.innerHTML=""
-    const elementcreate = document.createElement("option")
-    elementcreate.appendChild(document.createTextNode("Selecione uma CPU:"))
-    first.appendChild(elementcreate)
-
-
-    const second = document.getElementById("second")
-    second.innerHTML=""
-    const secondelement = document.createElement("option")
-    secondelement.appendChild(document.createTextNode("Selecione uma CPU:"))
-    second.appendChild(secondelement)
-    for (processor of processors){
-        const newItem = document.createElement("option")
-        newItem.setAttribute("value", processor.value)
-        newItem.appendChild(document.createTextNode(processor.title))
-        first.appendChild(newItem)
-        const newItem2 = document.createElement("option")
-        newItem2.setAttribute("value", processor.value)
-        newItem2.appendChild(document.createTextNode(processor.title))
-        second.appendChild(newItem2)
-
-
-        
-    }
-  }
-
-async function readTasks() {
-    processors = []
-    const logPrc1 = await db.collection("processors").get()
-    for (doc of logPrc1.docs) {
-    processors.push({
-        id: doc.id,
-        title: doc.data().title,
-        value: doc.data().value,
-        })
-    }
-    renderTasks()
-}
-readTasks()
 
 function visibilitytable(){
   const table = document.getElementById("compare").style

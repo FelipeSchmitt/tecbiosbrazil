@@ -13,33 +13,6 @@ var firebaseConfig = {
 
   const db = firebase.firestore()
 
-  function renderTasks(){
-    const first = document.getElementById("first")
-    first.innerHTML=""
-    const elementcreate = document.createElement("option")
-    elementcreate.appendChild(document.createTextNode("Selecione uma GPU:"))
-    first.appendChild(elementcreate)
-    for (videocard of videocards){
-        const newItem = document.createElement("option")
-        newItem.setAttribute("value", videocard.value)
-        newItem.appendChild(document.createTextNode(videocard.title))
-        first.appendChild(newItem)
-    }
-  }
-
-async function readTasks() {
-    videocards = []
-    const logPrc1 = await db.collection("videocards").get()
-    for (doc of logPrc1.docs) {
-    videocards.push({
-        id: doc.id,
-        title: doc.data().title,
-        value: doc.data().value,
-        })
-    }
-    renderTasks()
-}
-readTasks()
 
 function visibilitytable(){
     const table = document.getElementById("comparegpu").style

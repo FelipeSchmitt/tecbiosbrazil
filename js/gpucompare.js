@@ -13,50 +13,7 @@ var firebaseConfig = {
 
   const db = firebase.firestore()
 
-  function renderVClist(){
-    const first = document.getElementById("first")
-    first.innerHTML=""
-    const firstelement = document.getElementById("first")
-    firstelement.innerHTML=""
-    const elementcreate = document.createElement("option")
-    elementcreate.appendChild(document.createTextNode("Selecione uma GPU:"))
-    first.appendChild(elementcreate)
-
-
-    const second = document.getElementById("second")
-    second.innerHTML=""
-    const secondelement = document.createElement("option")
-    secondelement.appendChild(document.createTextNode("Selecione uma GPU:"))
-    second.appendChild(secondelement)
-    for (videocard of videocards){
-        const newItem = document.createElement("option")
-        newItem.setAttribute("value", videocard.value)
-        newItem.appendChild(document.createTextNode(videocard.title))
-        first.appendChild(newItem)
-        const newItem2 = document.createElement("option")
-        newItem2.setAttribute("value", videocard.value)
-        newItem2.appendChild(document.createTextNode(videocard.title))
-        second.appendChild(newItem2)
-
-
-        
-    }
-  }
-
-async function readVClist() {
-    videocards = []
-    const logVCS = await db.collection("videocards").get()
-    for (doc of logVCS.docs) {
-    videocards.push({
-        id: doc.id,
-        title: doc.data().title,
-        value: doc.data().value,
-        })
-    }
-    renderVClist()
-}
-readVClist()
-
+  
 function visibilitytable(){
   const table = document.getElementById("comparegpu").style
   const loading = document.getElementById("loading").style
