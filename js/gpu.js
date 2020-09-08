@@ -42,7 +42,8 @@ function visibilitytable(){
       alert("Selecione uma opção, ou outra diferente!")
     }
     else{
-    readVC1()
+    readVC1()  
     visibilitytable()
+    lorenipsen()
 }
 }

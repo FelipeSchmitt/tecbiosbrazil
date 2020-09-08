@@ -43,5 +43,6 @@ function visibilitytable(){
     else{
     readProcessor()
     visibilitytable()
+    lorenipsen()
 }
 }
